@@ -9,7 +9,7 @@ node
   {
   sh "${mavenHome}/bin/mvn clean package"
   }
-  stage('ExecuteSonarQubeReport')
+ /* stage('ExecuteSonarQubeReport')
   {
   sh "${mavenHome}/bin/mvn sonar:sonar
   }
@@ -28,6 +28,6 @@ node
   {
   mail bcc: '', body: 'Build Over', cc: 'sunitha.lakshman@gmail.com', from: '', replyTo: '', subject: 'Build Over', to: 'sunitha.lakshman@gmail.com'
   }
-  }
+  }*/
  }
   
