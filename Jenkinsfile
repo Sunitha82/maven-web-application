@@ -4,7 +4,7 @@ node('master')
 	properties([buildDiscarder(logRotator(artifactDaysToKeepStr: '', artifactNumToKeepStr: '4', daysToKeepStr: '', numToKeepStr: '5')), [$class: 'JobLocalConfiguration', changeReasonComment: ''], pipelineTriggers([pollSCM('* * * * *')])])
   stage('CheckoutCode')
   {
-   git branch: 'development', credentialsId: 'fb85d1fc-4b6f-475e-b5f8-55c6b4356921', url: 'https://github.com/Sunitha82/maven-web-application.git'
+   git branch: 'stage', credentialsId: 'fb85d1fc-4b6f-475e-b5f8-55c6b4356921', url: 'https://github.com/Sunitha82/maven-web-application.git'
    }
   stage('Build')
   {
